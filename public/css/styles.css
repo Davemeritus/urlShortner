@@ -1,0 +1,109 @@
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .header, .cta, .shorten {
+    padding: 2rem 0;
+  }
+  
+  .features .icon {
+    width: 50px;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cta {
+    background: url('/images/bg-boost-desktop.svg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+  }
+  
+  .cta .btn-primary {
+    background-color: #fff;
+    color: #2acfcf;
+    border: none;
+  }
+  
+  footer {
+    background-color: #232127;
+    color: #fff;
+  }
+  
+  footer .social-links img {
+    width: 40px;
+  }
+  
+  footer .footer-links a {
+    color: #9e9aa7;
+    text-decoration: none;
+  }
+  
+  footer .footer-links a:hover {
+    color: #fff;
+  }
+  
+  footer .footer-links h5 {
+    color: #fff;
+  }
+  
+  footer .footer-links {
+    margin-bottom: 2rem;
+  }
+  
+  .navbar {
+    padding: 1rem 0;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #9e9aa7;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #2acfcf;
+  }
+  
+  .navbar .btn-primary {
+    background-color: #2acfcf;
+    border: none;
+  }
+  
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .header .content {
+    max-width: 600px;
+    margin-right: 2rem;
+  }
+  
+  .header .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .header .content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .header .illustration {
+    max-width: 600px;
+    margin-top: 2rem;
+  }
+  
+  .footer-logo {
+    width: 50px;
+    height: auto;
+  }
+  

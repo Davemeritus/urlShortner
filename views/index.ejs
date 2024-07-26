@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png">
+  <title>Scissors - More than just shorter links</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="/images/logo.svg" alt="Scissors Logo" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary" href="#">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-light py-5 text-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="content">
+        <h1>More than just shorter links</h1>
+        <p class="lead">Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+        <a href="#shorten" class="btn btn-primary btn-lg">Get Started</a>
+      </div>
+      <div class="illustration">
+        <img src="/images/illustration-working.svg" alt="Working illustration" class="img-fluid">
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section id="shorten" class="shorten bg-light py-5">
+      <div class="container">
+        <h2 class="text-center">Scissors</h2>
+        <form action="/shortUrls" method="POST" class="form-inline justify-content-center my-4">
+          <input required placeholder="Shorten a link here" type="url" name="fullUrl" id="fullUrl" class="form-control col-md-8 mr-2">
+          <button class="btn btn-primary" type="submit">Cut!</button>
+        </form>
+        <table class="table table-striped table-responsive text-center">
+          <thead>
+            <tr>
+              <th>Full URL</th>
+              <th>Short URL</th>
+              <th>Clicks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% shortUrls.forEach(shortUrl => { %>
+              <tr>
+                <td><a href="<%= shortUrl.full %>" target="_blank"><%= shortUrl.full %></a></td>
+                <td><a href="/<%= shortUrl.short %>" target="_blank"><%= shortUrl.short %></a></td>
+                <td><%= shortUrl.clicks %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="features py-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <img src="/images/icon-brand-recognition.svg" alt="Brand Recognition" class="icon mb-3">
+            <h3>Brand Recognition</h3>
+            <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instill confidence in your content.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="/images/icon-detailed-records.svg" alt="Detailed Records" class="icon mb-3">
+            <h3>Detailed Records</h3>
+            <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="/images/icon-fully-customizable.svg" alt="Fully Customizable" class="icon mb-3">
+            <h3>Fully Customizable</h3>
+            <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+   
+  </main>
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="/images/logo.svg" alt="Scissors Logo" class="footer-logo mb-3">
+        </div>
+        <div class="col-md-3 footer-links">
+          <h5>Features</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Link Shortening</a></li>
+            <li><a href="#">Branded Links</a></li>
+            <li><a href="#">Analytics</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-links">
+          <h5>Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Developers</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-links">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-links mt-4">
+        <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook" class="mx-2"></a>
+        <a href="#"><img src="/images/icon-twitter.svg" alt="Twitter" class="mx-2"></a>
+        <a href="#"><img src="/images/icon-pinterest.svg" alt="Pinterest" class="mx-2"></a>
+        <a href="#"><img src="/images/icon-instagram.svg" alt="Instagram" class="mx-2"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqGI3d6exXEHeew0vOo2esPA8yX1n6zroIE3Lmkqz54QMRh1Jn" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-w1QK6FZINcGbo9mrRcyJbRVlEElaZ77xz5H/Gv4YimHpo0zsyKzh3Q8ZDh3j5ddo" crossorigin="anonymous"></script>
+</body>
+</html>
